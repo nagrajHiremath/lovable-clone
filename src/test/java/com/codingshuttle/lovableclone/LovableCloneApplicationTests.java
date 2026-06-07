@@ -1,4 +1,4 @@
-package com.codingshuttle.project.lovable_clone;
+package com.codingshuttle.lovableclone;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

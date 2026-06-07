@@ -1,0 +1,24 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: lovable-clone-db
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: main_db
+    ports:
+      - "5432:5432" # GUI connects here
+    volumes:
+      - pg_data:/var/lib/postgresql
+
+volumes:
+  pg_data:
+
+
+#  docker run -d ^
+#  --name central-gui ^
+#  -p 8978:8978 ^
+#  -v cloudbeaver_data:/opt/cloudbeaver/workspace ^
+#  dbeaver/cloudbeaver:latest
+
+
