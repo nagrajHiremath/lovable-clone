@@ -14,7 +14,7 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface ProjectMapper {
     Project toProjectEntity(ProjectRequest projectRequest);
-    @Mapping(source = "user.id", target = "userId")
+
     ProjectResponse toProjectResponse(Project project);
 
     ProjectSummaryResponse map(Project project);

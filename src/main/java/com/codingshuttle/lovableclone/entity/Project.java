@@ -20,10 +20,6 @@ public class Project {
     Long id;
     String name;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    User user;
-
     @CreationTimestamp
     Instant createdAt;
 

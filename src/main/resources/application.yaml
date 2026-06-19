@@ -2,7 +2,7 @@ spring:
   application:
     name: lovable-clone
   datasource:
-    url: jdbc:postgresql://localhost:5432/main_db
+    url: jdbc:postgresql://localhost:5432/lovable_clone_dev
     username: user
     password: password
     driver-class-name: org.postgresql.Driver

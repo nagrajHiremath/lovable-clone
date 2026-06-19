@@ -29,13 +29,12 @@ public class ProjectServiceImpl implements ProjectService {
     public ProjectResponse createProject(ProjectRequest projectRequest) {
         User owner = userRepository.findById(1L).orElseThrow();
         Project project = projectMapper.toProjectEntity(projectRequest);
-        project.setUser(owner);
         return projectMapper.toProjectResponse(projectRepository.save(project));
     }
 
     public List<ProjectSummaryResponse> getUserProjects() {
         Long id = 1L;
-        return projectMapper.toListProjectSummaryResponse(projectRepository.findByUserId(id));
+        return null;
     }
 
     public ProjectResponse getProjectById(Long id) {

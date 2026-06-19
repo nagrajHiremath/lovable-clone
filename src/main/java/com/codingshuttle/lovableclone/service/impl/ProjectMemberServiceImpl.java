@@ -35,7 +35,7 @@ public class ProjectMemberServiceImpl implements ProjectMemberService {
 
     public MemberResponse inviteMember(Long projectId, InviteMemberRequest inviteMemberRequest) {
 
-        User user = userRepository.findByEmail(inviteMemberRequest.userEmail());
+        User user = userRepository.findByUsername(inviteMemberRequest.userName()).orElseThrow();
         Project project = projectRepository.findById(projectId).orElseThrow();
         ProjectMemberId projectMemberId = new ProjectMemberId(projectId, user.getId());
 

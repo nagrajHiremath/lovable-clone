@@ -1,8 +1,7 @@
 package com.codingshuttle.lovableclone.dto.auth;
 
-public record LoginRequest(
-
+public record UserProfileResponse(
         String username,
-        String password
+        String name
 ) {
 }
