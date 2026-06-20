@@ -1,4 +1,3 @@
 package com.codingshuttle.lovableclone.dto.file;
 
-public record FileNode() {
-}
+public record FileNode() {}

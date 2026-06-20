@@ -13,14 +13,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RequestMapping("/api/usage")
 public class UsageController {
-    private final UsageService usageService;
+  private final UsageService usageService;
 
-    @GetMapping
-    public ResponseEntity<UsageTodayResponse> getTodayUsage(){
-        return ResponseEntity.ok(usageService.getTodayUsage());
-    }
-    @GetMapping("/planLimit")
-    public ResponseEntity<PlanLimitResponse> getPlanLimit(){
-        return ResponseEntity.ok(usageService.getPlanLimit());
-    }
+  @GetMapping
+  public ResponseEntity<UsageTodayResponse> getTodayUsage() {
+    return ResponseEntity.ok(usageService.getTodayUsage());
+  }
+
+  @GetMapping("/planLimit")
+  public ResponseEntity<PlanLimitResponse> getPlanLimit() {
+    return ResponseEntity.ok(usageService.getPlanLimit());
+  }
 }

@@ -15,29 +15,34 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class WebSecurityConfig {
 
-    @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity){
-        httpSecurity.csrf(csrfConfig->csrfConfig.disable())
-                .sessionManagement(sessionConfig->sessionConfig.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .authorizeHttpRequests(auth-> auth
-                        .requestMatchers("/api/auth/**").permitAll()
-                        .requestMatchers("/v3/api-docs/**").permitAll()
-                        .requestMatchers("/swagger-ui/**").permitAll()
-                        .anyRequest().authenticated()
-                );
+  @Bean
+  public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) {
+    httpSecurity
+        .csrf(csrfConfig -> csrfConfig.disable())
+        .sessionManagement(
+            sessionConfig -> sessionConfig.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+        .authorizeHttpRequests(
+            auth ->
+                auth.requestMatchers("/api/auth/**")
+                    .permitAll()
+                    .requestMatchers("/v3/api-docs/**")
+                    .permitAll()
+                    .requestMatchers("/swagger-ui/**")
+                    .permitAll()
+                    .anyRequest()
+                    .authenticated());
 
-        return httpSecurity.build();
-    }
+    return httpSecurity.build();
+  }
 
-    @Bean
-    public PasswordEncoder passwordEncoder(){
-        return new BCryptPasswordEncoder();
-    }
+  @Bean
+  public PasswordEncoder passwordEncoder() {
+    return new BCryptPasswordEncoder();
+  }
 
-    @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration){
-        return authenticationConfiguration.getAuthenticationManager();
-    }
-
-
+  @Bean
+  public AuthenticationManager authenticationManager(
+      AuthenticationConfiguration authenticationConfiguration) {
+    return authenticationConfiguration.getAuthenticationManager();
+  }
 }

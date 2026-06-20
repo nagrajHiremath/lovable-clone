@@ -1,12 +1,12 @@
 package com.codingshuttle.lovableclone.entity;
 
 import jakarta.persistence.*;
+import java.time.Instant;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import java.time.Instant;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -15,16 +15,15 @@ import java.time.Instant;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Table(name = "project")
 public class Project {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    String name;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  Long id;
 
-    @CreationTimestamp
-    Instant createdAt;
+  String name;
 
-    @UpdateTimestamp
-    Instant updatedAt;
+  @CreationTimestamp Instant createdAt;
 
-    Instant deletedAt;
+  @UpdateTimestamp Instant updatedAt;
+
+  Instant deletedAt;
 }

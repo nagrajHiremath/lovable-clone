@@ -1,4 +1,3 @@
 package com.codingshuttle.lovableclone.service;
 
-public interface UserService {
-}
+public interface UserService {}

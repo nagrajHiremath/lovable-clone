@@ -1,4 +1,3 @@
 package com.codingshuttle.lovableclone.dto.subscription;
 
-public record CheckoutRequest() {
-}
+public record CheckoutRequest() {}

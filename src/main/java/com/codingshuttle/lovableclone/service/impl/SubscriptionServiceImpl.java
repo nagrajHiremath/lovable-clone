@@ -9,15 +9,15 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class SubscriptionServiceImpl implements SubscriptionService {
-    public SubscriptionResponse getMySubscription() {
-        return null;
-    }
+  public SubscriptionResponse getMySubscription() {
+    return null;
+  }
 
-    public CheckoutResponse createCheckoutSessionUrl(CheckoutRequest checkoutRequest) {
-        return null;
-    }
+  public CheckoutResponse createCheckoutSessionUrl(CheckoutRequest checkoutRequest) {
+    return null;
+  }
 
-    public PortalResponse openCustomerPortal() {
-        return null;
-    }
+  public PortalResponse openCustomerPortal() {
+    return null;
+  }
 }

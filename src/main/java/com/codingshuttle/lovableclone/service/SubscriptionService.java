@@ -6,9 +6,9 @@ import com.codingshuttle.lovableclone.dto.subscription.PortalResponse;
 import com.codingshuttle.lovableclone.dto.subscription.SubscriptionResponse;
 
 public interface SubscriptionService {
-    SubscriptionResponse getMySubscription();
+  SubscriptionResponse getMySubscription();
 
-    CheckoutResponse createCheckoutSessionUrl(CheckoutRequest checkoutRequest);
+  CheckoutResponse createCheckoutSessionUrl(CheckoutRequest checkoutRequest);
 
-    PortalResponse openCustomerPortal();
+  PortalResponse openCustomerPortal();
 }

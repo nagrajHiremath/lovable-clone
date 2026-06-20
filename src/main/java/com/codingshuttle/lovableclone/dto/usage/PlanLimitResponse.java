@@ -1,4 +1,3 @@
 package com.codingshuttle.lovableclone.dto.usage;
 
-public record PlanLimitResponse() {
-}
+public record PlanLimitResponse() {}

@@ -9,8 +9,8 @@ import org.mapstruct.Mapping;
 @Mapper(componentModel = "spring")
 public interface AuthMapper {
 
-    @Mapping(source = "username", target = "username")
-    User toUserEntity(SignUpRequest signUpRequest);
+  @Mapping(source = "username", target = "username")
+  User toUserEntity(SignUpRequest signUpRequest);
 
-    UserProfileResponse toUserProfileResponse(User newUser);
+  UserProfileResponse toUserProfileResponse(User newUser);
 }

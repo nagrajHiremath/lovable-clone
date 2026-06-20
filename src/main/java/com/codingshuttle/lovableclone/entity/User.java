@@ -1,16 +1,15 @@
 package com.codingshuttle.lovableclone.entity;
 
 import jakarta.persistence.*;
+import java.time.Instant;
+import java.util.Collection;
+import java.util.List;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
-import java.time.Instant;
-import java.util.Collection;
-import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -20,26 +19,23 @@ import java.util.List;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Table(name = "users")
 public class User implements UserDetails {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
-    Long id;
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Id
+  Long id;
 
-    String username;
-    String name;
-    String password;
-    String avatarUrl;
+  String username;
+  String name;
+  String password;
+  String avatarUrl;
 
-    @CreationTimestamp
-    Instant createdAt;
+  @CreationTimestamp Instant createdAt;
 
-    @UpdateTimestamp
-    Instant updatedAt;
+  @UpdateTimestamp Instant updatedAt;
 
-    Instant deletedAt;
+  Instant deletedAt;
 
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of();
-    }
-
+  @Override
+  public Collection<? extends GrantedAuthority> getAuthorities() {
+    return List.of();
+  }
 }

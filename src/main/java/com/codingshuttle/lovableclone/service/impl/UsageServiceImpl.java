@@ -7,11 +7,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UsageServiceImpl implements UsageService {
-    public UsageTodayResponse getTodayUsage() {
-        return null;
-    }
+  public UsageTodayResponse getTodayUsage() {
+    return null;
+  }
 
-    public PlanLimitResponse getPlanLimit() {
-        return null;
-    }
+  public PlanLimitResponse getPlanLimit() {
+    return null;
+  }
 }

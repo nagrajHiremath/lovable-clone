@@ -1,11 +1,7 @@
 package com.codingshuttle.lovableclone.entity;
 
 import jakarta.persistence.Embeddable;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 import lombok.*;
-import lombok.experimental.FieldDefaults;
 
 @Embeddable
 @Getter
@@ -13,6 +9,6 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ProjectMemberId {
-    Long projectId;
-    Long userId;
+  Long projectId;
+  Long userId;
 }

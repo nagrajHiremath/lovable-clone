@@ -12,6 +12,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ChatSessionId {
-    Long projectId;
-    Long userId;
+  Long projectId;
+  Long userId;
 }

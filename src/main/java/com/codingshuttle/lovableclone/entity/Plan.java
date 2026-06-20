@@ -14,12 +14,13 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Table(name = "plan")
 public class Plan {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
-    Long id;
-    String stripePriceId;
-    Integer maxProjectsPerDay;
-    Integer maxTokensPerDay;
-    Boolean unlimitedAI;
-    Boolean isActive;
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Id
+  Long id;
+
+  String stripePriceId;
+  Integer maxProjectsPerDay;
+  Integer maxTokensPerDay;
+  Boolean unlimitedAI;
+  Boolean isActive;
 }
